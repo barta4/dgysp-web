@@ -63,25 +63,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Botones "Cotizar este servicio" -> preseleccionan en el formulario y hacen scroll
+  // 4. Preselección del servicio al llegar desde una tarjeta (?servicio=slug)
   const serviceSelect = document.getElementById('serviceSelect');
-  const projectDetails = document.getElementById('projectDetails');
 
-  document.querySelectorAll('.service-cta').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const serviceName = btn.dataset.service;
-      if (serviceSelect && serviceName) {
-        serviceSelect.value = serviceName;
-      }
-      const contactSection = document.getElementById('contacto');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-      }
-      setTimeout(() => {
-        projectDetails?.focus();
-      }, 450);
-    });
-  });
+  const serviceBySlug = {
+    mantenimiento: 'Mantenimiento General',
+    electricidad: 'Instalaciones Eléctricas',
+    pintura: 'Pintura Interior y Exterior',
+    plomeria: 'Plomería y Sanitaria',
+    albanileria: 'Albañilería',
+    remodelaciones: 'Remodelaciones y Acabados',
+  };
+
+  if (serviceSelect) {
+    const slug = new URLSearchParams(window.location.search).get('servicio');
+    const serviceName = serviceBySlug[slug];
+    if (serviceName) {
+      const option = Array.from(serviceSelect.options).find((o) => o.value === serviceName);
+      if (option) serviceSelect.value = serviceName;
+    }
+  }
 
   // 5. Formulario de cotización -> abre WhatsApp con resumen estructurado
   const quoteForm = document.getElementById('quoteForm');

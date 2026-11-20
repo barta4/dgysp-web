@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros | DG y SP Servicios</title>
+  <meta name="description" content="Conocé al equipo de DG y SP Servicios: planificación, materiales certificados y acompañamiento directo de sus titulares en cada obra de Montevideo." />
+  <meta name="theme-color" content="#0F1114" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-lockup" aria-label="DG y SP Servicios - Inicio">
+        <!-- SVG Logo fiel: techo dorado/blanco + DG con rayo en la D + y SP + SERVICIOS -->
+        <svg class="brand-svg" viewBox="0 0 280 76" width="230" height="62" role="img" aria-label="Logo DG y SP Servicios">
+          <defs>
+            <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#F1EEE7" />
+              <stop offset="45%" stop-color="#C4BEB2" />
+              <stop offset="100%" stop-color="#8F887A" />
+            </linearGradient>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#F3E1BB" />
+              <stop offset="50%" stop-color="#C9A469" />
+              <stop offset="100%" stop-color="#96763F" />
+            </linearGradient>
+          </defs>
+          <!-- Silueta de techo (estilo flyer reformas) -->
+          <path d="M98 16 L140 3 L165 11" fill="none" stroke="#F6F3EC" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M140 3 L182 16" fill="none" stroke="url(#goldGrad)" stroke-width="3.2" stroke-linecap="round" />
+          <!-- Ventanita 4 cuadros bajo la cumbrera -->
+          <rect x="135" y="10" width="4" height="4" fill="#F6F3EC" />
+          <rect x="141" y="10" width="4" height="4" fill="#F6F3EC" />
+          <rect x="135" y="15.5" width="4" height="4" fill="url(#goldGrad)" />
+          <rect x="141" y="15.5" width="4" height="4" fill="url(#goldGrad)" />
+
+          <!-- Letra D con rayo eléctrico integrado -->
+          <path d="M27 25 H46 C59 25 67 31.5 67 40 C67 48.5 59 55 46 55 H27 L34 43 H24 L36 25 Z" fill="url(#metalGrad)" />
+          <polygon points="35,25 22,42 31,42 25,55 40,38 31,38" fill="#0F1114" />
+          <polygon points="35,26 24,41 32,41 27,53 38,39 30,39" fill="url(#goldGrad)" />
+          <path d="M40 31 H46 C53 31 57 34.5 57 40 C57 45.5 53 49 46 49 H38 Z" fill="#0F1114" />
+
+          <!-- Letra G -->
+          <text x="72" y="54" font-family="Montserrat, sans-serif" font-weight="900" font-size="37" fill="url(#metalGrad)" letter-spacing="-1">G</text>
+
+          <!-- y -->
+          <text x="122" y="52" font-family="Montserrat, sans-serif" font-weight="800" font-size="20" fill="url(#goldGrad)">Y</text>
+
+          <!-- SP -->
+          <text x="142" y="54" font-family="Montserrat, sans-serif" font-weight="900" font-size="37" fill="url(#metalGrad)" letter-spacing="1">SP</text>
+
+          <!-- Subtítulo SERVICIOS -->
+          <line x1="28" y1="60" x2="108" y2="60" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.7" />
+          <line x1="172" y1="60" x2="252" y2="60" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.7" />
+          <text x="140" y="70" text-anchor="middle" font-family="Cinzel, serif" font-weight="600" font-size="13" fill="#F6F3EC" letter-spacing="7">SERVICIOS</text>
+        </svg>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="reformas.html">Reformas</a>
+        <a href="obras.html">Obras y Avances</a>
+        <a href="nosotros.html" class="active">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contacto.html" class="btn btn-gold btn-sm">
+          <span>Solicitar Presupuesto</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" hidden>
+      <a href="index.html" class="drawer-link">Inicio</a>
+      <a href="servicios.html" class="drawer-link">Servicios</a>
+      <a href="reformas.html" class="drawer-link">Cocinas y Baños</a>
+      <a href="obras.html" class="drawer-link">Antes / Después y Avances</a>
+      <a href="nosotros.html" class="drawer-link">Nosotros y Sello Oficial</a>
+      <a href="contacto.html" class="drawer-link">Cotizar / Contacto</a>
+      <div class="drawer-phones">
+        <a href="https://wa.me/59895006915" target="_blank" rel="noopener">WhatsApp 095 006 915</a>
+        <a href="https://wa.me/59899363389" target="_blank" rel="noopener">Tel / WA 099 363 389</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section stone-identity-section" id="nosotros">
+      <div class="container">
+        <nav class="breadcrumb breadcrumb--dark" aria-label="Miga de pan">
+          <a href="index.html">Inicio</a>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <span aria-current="page">Nosotros</span>
+        </nav>
+        <div class="identity-grid">
+        <div class="emblem-showcase reveal">
+          <button type="button" class="emblem-zoom-card" data-lightbox="assets/img/emblema-original.jpg" data-caption="Emblema Institucional — DG y SP Servicios">
+            <img src="assets/img/emblema-circular.png" alt="Sello oficial circular DG y SP Servicios" />
+            <span class="zoom-hint">Clic para ampliar sello oficial</span>
+          </button>
+        </div>
+
+        <div class="identity-content reveal">
+          <span class="section-kicker-dark">IDENTIDAD Y RESPALDO</span>
+          <h1 class="section-title-dark">Confianza • Calidad • Compromiso</h1>
+          <p class="identity-lead">
+            Detrás de <strong>DG y SP Servicios</strong> hay un equipo técnico presente en cada obra. Desde la planificación en oficina con planos y materiales certificados hasta la entrega final impecable.
+          </p>
+
+          <div class="identity-values-grid">
+            <div class="id-val-box">
+              <strong>Ideas y Planificación</strong>
+              <p>Asesoramos sobre materiales y soluciones constructivas que maximizan la vida útil de tu propiedad.</p>
+            </div>
+            <div class="id-val-box">
+              <strong>Obras y Resultados</strong>
+              <p>Cumplimos los plazos pactados con limpieza, seguridad en obra y comunicación permanente.</p>
+            </div>
+          </div>
+
+          <div class="identity-team-thumb" data-lightbox="assets/img/equipo-completo.jpg" data-caption="Equipo Directivo — DG y SP Servicios">
+            <img src="assets/img/equipo-completo.jpg" alt="Equipo DG y SP Servicios con todos sus rubros y contactos" loading="lazy" />
+            <div>
+              <strong>Ver presentación institucional completa</strong>
+              <span>Montevideo, Uruguay • Atención directa de sus titulares</span>
+            </div>
+          </div>
+        </div>
+      </div>
+            </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-text">
+          <strong>DG y SP <span>SERVICIOS</span></strong>
+          <small>REFORMAS EN GRAL. Y MANTENIMIENTOS</small>
+        </div>
+        <p>Soluciones con distinción, resultados que hablan. Detalles que transforman, calidad que perdura.</p>
+      </div>
+
+      <div class="footer-links">
+        <h2>Servicios</h2>
+        <a href="servicios.html#mantenimiento">Mantenimiento General</a>
+        <a href="servicios.html#electricidad">Instalaciones Eléctricas</a>
+        <a href="servicios.html#pintura">Pintura Interior y Exterior</a>
+        <a href="servicios.html#plomeria">Plomería y Sanitaria</a>
+        <a href="servicios.html#albanileria">Albañilería y Techos</a>
+        <a href="reformas.html">Remodelaciones de Cocinas y Baños</a>
+      </div>
+
+      <div class="footer-contact">
+        <h2>Contacto Directo</h2>
+        <p>📍 Montevideo, Uruguay</p>
+        <p>📱 <a href="tel:+59895006915">095 006 915</a></p>
+        <p>📞 <a href="tel:+59899363389">099 363 389</a></p>
+        <p>📷 <a href="https://instagram.com/dg_electricidadyredes" target="_blank" rel="noopener">@dg_electricidadyredes</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© <span id="currentYear">2026</span> DG y SP Servicios. Todos los derechos reservados.</span>
+        <span>Confianza • Calidad • Compromiso</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/59895006915?text=Hola%20DG%20y%20SP%20Servicios%2C%20quisiera%20consultar%20por%20un%20presupuesto." target="_blank" rel="noopener" class="wa-float" aria-label="Presupuesto por WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M12.03 2a9.97 9.97 0 0 0-8.5 15.2L2 22l4.94-1.48A9.97 9.97 0 1 0 12.03 2Zm5.82 14.11c-.25.7-1.42 1.34-1.97 1.41-.51.07-1.15.1-1.85-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07 0-1.46.77-2.18 1.04-2.48.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.07.92 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.45.52-.15.15-.3.31-.13.61.18.3.78 1.28 1.67 2.08 1.15 1.03 2.12 1.35 2.42 1.5.3.15.47.13.65-.07.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.35.07.13.07.73-.18 1.43Z"/></svg>
+    <span class="wa-tooltip">Presupuesto por WhatsApp</span>
+  </a>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada" hidden>
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Cerrar vista ampliada">&times;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="" />
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
