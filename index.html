@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DG y SP Servicios | Reformas Generales, Electricidad, Sanitaria y Mantenimiento en Montevideo</title>
+  <meta name="description" content="DG y SP Servicios — Soluciones con distinción, resultados que hablan. Mantenimiento general, instalaciones eléctricas, pintura, plomería, albañilería y remodelaciones en Montevideo, Uruguay." />
+  <meta name="theme-color" content="#111317" />
+
+  <!-- Google Fonts: Montserrat (Geometric Bold), Cinzel (Distinción Serif), Caveat (Detalles manuscritos), Inter (Lectura) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header class="site-header" id="top">
+    <div class="container nav-container">
+      <a href="#inicio" class="brand-lockup" aria-label="DG y SP Servicios - Inicio">
+        <!-- SVG Logo fiel: techo dorado/blanco + DG con rayo en la D + y SP + SERVICIOS -->
+        <svg class="brand-svg" viewBox="0 0 280 76" width="230" height="62" role="img" aria-label="Logo DG y SP Servicios">
+          <defs>
+            <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#F3F4F6" />
+              <stop offset="45%" stop-color="#C5C9D0" />
+              <stop offset="100%" stop-color="#8A919C" />
+            </linearGradient>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#F2CF7E" />
+              <stop offset="50%" stop-color="#D4A853" />
+              <stop offset="100%" stop-color="#B07F2A" />
+            </linearGradient>
+          </defs>
+          <!-- Silueta de techo (estilo flyer reformas) -->
+          <path d="M98 16 L140 3 L165 11" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M140 3 L182 16" fill="none" stroke="url(#goldGrad)" stroke-width="3.2" stroke-linecap="round" />
+          <!-- Ventanita 4 cuadros bajo la cumbrera -->
+          <rect x="135" y="10" width="4" height="4" fill="#FFFFFF" />
+          <rect x="141" y="10" width="4" height="4" fill="#FFFFFF" />
+          <rect x="135" y="15.5" width="4" height="4" fill="url(#goldGrad)" />
+          <rect x="141" y="15.5" width="4" height="4" fill="url(#goldGrad)" />
+
+          <!-- Letra D con rayo eléctrico integrado -->
+          <path d="M27 25 H46 C59 25 67 31.5 67 40 C67 48.5 59 55 46 55 H27 L34 43 H24 L36 25 Z" fill="url(#metalGrad)" />
+          <polygon points="35,25 22,42 31,42 25,55 40,38 31,38" fill="#111317" />
+          <polygon points="35,26 24,41 32,41 27,53 38,39 30,39" fill="url(#goldGrad)" />
+          <path d="M40 31 H46 C53 31 57 34.5 57 40 C57 45.5 53 49 46 49 H38 Z" fill="#111317" />
+
+          <!-- Letra G -->
+          <text x="72" y="54" font-family="Montserrat, sans-serif" font-weight="900" font-size="37" fill="url(#metalGrad)" letter-spacing="-1">G</text>
+
+          <!-- y -->
+          <text x="122" y="52" font-family="Montserrat, sans-serif" font-weight="800" font-size="20" fill="url(#goldGrad)">Y</text>
+
+          <!-- SP -->
+          <text x="142" y="54" font-family="Montserrat, sans-serif" font-weight="900" font-size="37" fill="url(#metalGrad)" letter-spacing="1">SP</text>
+
+          <!-- Subtítulo SERVICIOS -->
+          <line x1="28" y1="60" x2="108" y2="60" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.7" />
+          <line x1="172" y1="60" x2="252" y2="60" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.7" />
+          <text x="140" y="70" text-anchor="middle" font-family="Cinzel, serif" font-weight="600" font-size="13" fill="#F3F4F6" letter-spacing="7">SERVICIOS</text>
+        </svg>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#inversion">Reformas</a>
+        <a href="#obras">Obras y Avances</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contacto" class="btn btn-gold btn-sm">
+          <span>Solicitar Presupuesto</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" hidden>
+      <a href="#inicio" class="drawer-link">Inicio</a>
+      <a href="#servicios" class="drawer-link">Servicios</a>
+      <a href="#inversion" class="drawer-link">Cocinas y Baños</a>
+      <a href="#obras" class="drawer-link">Antes / Después y Avances</a>
+      <a href="#nosotros" class="drawer-link">Nosotros y Sello Oficial</a>
+      <a href="#contacto" class="drawer-link">Cotizar / Contacto</a>
+      <div class="drawer-phones">
+        <a href="https://wa.me/59895006915" target="_blank" rel="noopener">WhatsApp 095 006 915</a>
+        <a href="https://wa.me/59899363389" target="_blank" rel="noopener">Tel / WA 099 363 389</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section" id="inicio">
+      <div class="hero-bg-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="hero-eyebrow">
+            <span class="dot-gold"></span>
+            <span>MONTEVIDEO, URUGUAY • REFORMAS EN GRAL. Y MANTENIMIENTOS</span>
+          </div>
+
+          <p class="hero-slogan-serif">Soluciones con distinción, resultados que hablan</p>
+
+          <h1 class="hero-title">
+            Que tu inversión se vea reflejada en el <span class="text-gold">valor de tu inmueble</span>
+          </h1>
+
+          <p class="hero-description">
+            En <strong>DG y SP Servicios</strong> entendemos que cada proyecto es una inversión en el presente y en el futuro. Trabajamos pensando en los próximos <strong>40 años</strong>, combinando planificación, precisión técnica y terminaciones de alta gama.
+          </p>
+
+          <div class="hero-pillars">
+            <span>Planificación</span>
+            <span class="sep">•</span>
+            <span>Calidad</span>
+            <span class="sep">•</span>
+            <span>Compromiso</span>
+            <span class="sep">•</span>
+            <span>Confianza</span>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#contacto" class="btn btn-gold btn-lg">
+              Cotizar Mi Proyecto
+            </a>
+            <a href="https://wa.me/59895006915?text=Hola%20DG%20y%20SP%20Servicios%2C%20quisiera%20consultar%20por%20un%20presupuesto." target="_blank" rel="noopener" class="btn btn-outline-light btn-lg">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12.03 2a9.97 9.97 0 0 0-8.5 15.2L2 22l4.94-1.48A9.97 9.97 0 1 0 12.03 2Zm5.82 14.11c-.25.7-1.42 1.34-1.97 1.41-.51.07-1.15.1-1.85-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07 0-1.46.77-2.18 1.04-2.48.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.07.92 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.45.52-.15.15-.3.31-.13.61.18.3.78 1.28 1.67 2.08 1.15 1.03 2.12 1.35 2.42 1.5.3.15.47.13.65-.07.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.35.07.13.07.73-.18 1.43Z"/></svg>
+              <span>WhatsApp 095 006 915</span>
+            </a>
+          </div>
+
+          <div class="hero-contact-strip">
+            <a href="tel:+59895006915" class="contact-chip">
+              <span class="chip-label">Línea 1:</span>
+              <strong>095 006 915</strong>
+            </a>
+            <a href="tel:+59899363389" class="contact-chip">
+              <span class="chip-label">Línea 2:</span>
+              <strong>099 363 389</strong>
+            </a>
+            <a href="https://instagram.com/dg_electricidadyredes" target="_blank" rel="noopener" class="contact-chip">
+              <span class="chip-label">Instagram:</span>
+              <strong>@dg_electricidadyredes</strong>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-card-frame">
+            <img src="assets/img/equipo-oficina.jpg" alt="Equipo directivo de DG y SP Servicios con logo oficial 3D" class="hero-team-img" />
+            <div class="hero-script-badge">Tu proyecto en buenas manos</div>
+            <!-- Sello circular superpuesto en esquina inferior izquierda -->
+            <button type="button" class="emblem-float-btn" data-lightbox="assets/img/emblema-original.jpg" data-caption="Sello Oficial — DG y SP Servicios" aria-label="Ver sello oficial ampliado">
+              <img src="assets/img/emblema-circular.png" alt="Emblema circular DG y SP Servicios" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra de garantías inferiores fiel al flyer -->
+      <div class="trust-bar">
+        <div class="container trust-grid">
+          <div class="trust-item">
+            <span class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <div>
+              <strong>Trabajos Garantizados</strong>
+              <small>Calidad que perdura en cada detalle</small>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
+            <div>
+              <strong>Atención Personalizada</strong>
+              <small>Asesoramiento directo en obra</small>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <div>
+              <strong>Cumplimos a Tiempo</strong>
+              <small>Seriedad y planificación de plazos</small>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/></svg>
+            </span>
+            <div>
+              <strong>Trabajo Seguro y Certificado</strong>
+              <small>Materiales de primera línea</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6 SERVICIOS PRINCIPALES ================= -->
+    <section class="section services-section" id="servicios">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">NUESTRAS ESPECIALIDADES</span>
+          <h2 class="section-title">Seis Rubros Integrales Bajo <span class="text-gold">Una Sola Dirección</span></h2>
+          <p class="section-subtitle">
+            Detalles que transforman, calidad que perdura. Resolvemos desde mantenimientos puntuales hasta remodelaciones integrales llave en mano.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- 1. Mantenimiento General -->
+          <article class="service-card reveal">
+            <div class="service-icon-ring">
+              <svg viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 14l20 20M34 14L14 34" />
+                <path d="M11 17a5 5 0 0 1 6-6l3 3-6 6-3-3z" />
+                <path d="M37 31a5 5 0 0 1-6 6l-3-3 6-6 3 3z" />
+              </svg>
+            </div>
+            <h3>Mantenimiento General</h3>
+            <p>Soluciones rápidas y preventivas para hogares, oficinas, edificios y locales comerciales. Reparaciones integrales con prolijidad.</p>
+            <ul class="service-bullets">
+              <li>Mantenimiento edilicio preventivo y correctivo</li>
+              <li>Herrajes, aberturas, sellados e impermeabilización</li>
+              <li>Atención a consorcios y empresas</li>
+            </ul>
+            <button type="button" class="service-cta" data-service="Mantenimiento General">Cotizar este servicio →</button>
+          </article>
+
+          <!-- 2. Instalaciones Eléctricas -->
+          <article class="service-card reveal">
+            <div class="service-icon-ring">
+              <svg viewBox="0 0 48 48" width="32" height="32" fill="currentColor">
+                <path d="M27 6L12 26h11l-2 16 15-20H25l2-16z" />
+              </svg>
+            </div>
+            <h3>Instalaciones Eléctricas</h3>
+            <p>Instalaciones seguras bajo normativa, tableros, iluminación arquitectónica LED, cableado estructurado y detección de fallas.</p>
+            <ul class="service-bullets">
+              <li>Tableros eléctricos, diferenciales y puestas a tierra</li>
+              <li>Iluminación LED decorativa e industrial</li>
+              <li>Redes y electricidad integral (@dg_electricidadyredes)</li>
+            </ul>
+            <button type="button" class="service-cta" data-service="Instalaciones Eléctricas">Cotizar este servicio →</button>
+          </article>
+
+          <!-- 3. Pintura Interior y Exterior -->
+          <article class="service-card reveal">
+            <div class="service-icon-ring">
+              <svg viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="10" y="10" width="22" height="9" rx="2" fill="currentColor" fill-opacity="0.2" />
+                <path d="M32 14.5h5v7l-11 4v6" />
+                <rect x="23" y="31.5" width="6" height="10" rx="1.5" />
+              </svg>
+            </div>
+            <h3>Pintura Interior y Exterior</h3>
+            <p>Acabados limpios y duraderos con preparación previa de superficies, enduido, fijadores e impermeabilizantes de exterior.</p>
+            <ul class="service-bullets">
+              <li>Enduido fino y restauración de paredes</li>
+              <li>Pintura acrílica, látex, esmaltes y fachadas</li>
+              <li>Tratamientos antihumedad e impermeabilización</li>
+            </ul>
+            <button type="button" class="service-cta" data-service="Pintura Interior y Exterior">Cotizar este servicio →</button>
+          </article>
+
+          <!-- 4. Plomería y Sanitaria -->
+          <article class="service-card reveal">
+            <div class="service-icon-ring">
+              <svg viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 10v14a8 8 0 0 0 8 8h10" />
+                <path d="M8 10h8M30 28v8" />
+                <path d="M35 38c0 2.5-2 4-2 4s-2-1.5-2-4a2 2 0 1 1 4 0z" fill="currentColor" />
+              </svg>
+            </div>
+            <h3>Plomería y Sanitaria</h3>
+            <p>Instalaciones sanitarias nuevas y reformas en termofusión, desagües, griferías, calefones y detección de pérdidas.</p>
+            <ul class="service-bullets">
+              <li>Termofusión agua fría/caliente y desagües PVC</li>
+              <li>Instalación de loza sanitaria, mamparas y griferías</li>
+              <li>Albañilería sanitaria completa</li>
+            </ul>
+            <button type="button" class="service-cta" data-service="Plomería y Sanitaria">Cotizar este servicio →</button>
+          </article>
+
+          <!-- 5. Albañilería -->
+          <article class="service-card reveal">
+            <div class="service-icon-ring">
+              <svg viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="11" width="30" height="22" rx="1" />
+                <line x1="8" y1="18.3" x2="38" y2="18.3" />
+                <line x1="8" y1="25.6" x2="38" y2="25.6" />
+                <line x1="23" y1="11" x2="23" y2="18.3" />
+                <line x1="16" y1="18.3" x2="16" y2="25.6" />
+                <line x1="30" y1="18.3" x2="30" y2="25.6" />
+                <path d="M29 27l10 10" stroke-width="3" />
+              </svg>
+            </div>
+            <h3>Albañilería</h3>
+            <p>Obra gruesa y fina: levantamiento de muros, revoques, contrapisos, estructuras metálicas y colocación de techos de chapa.</p>
+            <ul class="service-bullets">
+              <li>Levantamiento de paredes y tabiques</li>
+              <li>Estructuras de hierro y techos de chapa</li>
+              <li>Revoques, carpetas y colocación de revestimientos</li>
+            </ul>
+            <button type="button" class="service-cta" data-service="Albañilería">Cotizar este servicio →</button>
+          </article>
+
+          <!-- 6. Remodelaciones y Acabados -->
+          <article class="service-card reveal">
+            <div class="service-icon-ring">
+              <svg viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 23L24 9l18 14" />
+                <path d="M12 20v18h24V20" />
+                <rect x="20" y="27" width="8" height="11" />
+              </svg>
+            </div>
+            <h3>Remodelaciones y Acabados</h3>
+            <p>Transformación completa de cocinas, baños y ambientes con porcelanato, islas, iluminación cálida y detalles de distinción.</p>
+            <ul class="service-bullets">
+              <li>Cocinas modernas y funcionales a medida</li>
+              <li>Baños de diseño con nichos y espejos LED</li>
+              <li>Valorización integral de propiedades</li>
+            </ul>
+            <button type="button" class="service-cta" data-service="Remodelaciones y Acabados">Cotizar este servicio →</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECCIÓN VALORIZACIÓN: COCINAS Y BAÑOS ================= -->
+    <section class="section showcase-section" id="inversion">
+      <div class="container">
+        <div class="showcase-header reveal">
+          <div class="showcase-copy">
+            <span class="section-kicker">REFORMAS DE ALTA GAMA</span>
+            <h2 class="section-title">Espacios Diseñados Para Durar <span class="text-gold">40 Años</span></h2>
+            <p class="lead-text">
+              Nuestro compromiso es que cada peso que nuestros clientes invierten se vea reflejado en la <strong>calidad, la funcionalidad y la valorización</strong> de su inmueble.
+            </p>
+            <div class="script-accent">Más que obras, Soluciones</div>
+          </div>
+          <div class="showcase-flyer-preview">
+            <button type="button" class="flyer-pill-btn" data-lightbox="assets/img/interiores-flyer.jpg" data-caption="Reformas en General — Valorización de Inmuebles">
+              <img src="assets/img/cocina-moderna.jpg" alt="Vista previa lámina reformas" />
+              <span>Ver lámina completa</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="interior-grid">
+          <!-- Tarjeta Grande Cocina -->
+          <article class="interior-card interior-card--wide reveal" data-lightbox="assets/img/cocina-moderna.jpg" data-caption="Cocinas Modernas y Funcionales — Isla con iluminación LED">
+            <img src="assets/img/cocina-moderna.jpg" alt="Cocina moderna remodelada con isla e iluminación LED cálida" loading="lazy" />
+            <div class="interior-overlay">
+              <span class="hand-tag">Cocinas</span>
+              <h3>Modernas y Funcionales</h3>
+              <p>Mobiliario a medida, mesadas impecables e iluminación LED perimetral e inferior.</p>
+            </div>
+          </article>
+
+          <!-- Tarjeta Baño 1 -->
+          <article class="interior-card reveal" data-lightbox="assets/img/bano-espejo-redondo.jpg" data-caption="Baños — Elegancia y Confort con espejo circular retroiluminado">
+            <img src="assets/img/bano-espejo-redondo.jpg" alt="Baño moderno con espejo circular retroiluminado y bacha de apoyo" loading="lazy" />
+            <div class="interior-overlay">
+              <span class="hand-tag">Baños</span>
+              <h3>Elegancia y Confort</h3>
+              <p>Revestimiento hexagonal, grifería negra mate y espejo circular LED.</p>
+            </div>
+          </article>
+
+          <!-- Tarjeta Baño 2 -->
+          <article class="interior-card reveal" data-lightbox="assets/img/bano-mampara.jpg" data-caption="Diseños Modernos y Duraderos — Mampara de vidrio templado y porcelanato">
+            <img src="assets/img/bano-mampara.jpg" alt="Baño con mampara de vidrio templado y nicho iluminado" loading="lazy" />
+            <div class="interior-overlay">
+              <span class="tag-gold">Diseños</span>
+              <h3>Modernos y Duraderos</h3>
+              <p>Porcelanatos rectificados, nicho de ducha iluminado y mampara templada.</p>
+            </div>
+          </article>
+
+          <!-- Tarjeta Baño 3 -->
+          <article class="interior-card reveal" data-lightbox="assets/img/bano-espejo-led.jpg" data-caption="Detalles que Marcan la Diferencia — Espejo LED táctil y grifería cromada">
+            <img src="assets/img/bano-espejo-led.jpg" alt="Detalle de lavatorio moderno con espejo LED táctil" loading="lazy" />
+            <div class="interior-overlay">
+              <span class="tag-gold">Detalles</span>
+              <h3>Que Marcan la Diferencia</h3>
+              <p>Terminaciones limpias, electricidad protegida e iluminación ambiental.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECCIÓN ANTES / DURANTE / DESPUÉS + AVANCES DE OBRA ================= -->
+    <section class="section works-section" id="obras">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">TRANSPARENCIA EN CADA ETAPA</span>
+          <h2 class="section-title">Proyectos Reales: <span class="text-gold">Proceso y Resultados</span></h2>
+          <p class="section-subtitle">
+            Documentamos nuestros avances paso a paso. Calidad que se ve, seguridad que dura.
+          </p>
+        </div>
+
+        <!-- Tabs de proyectos -->
+        <div class="project-tabs" role="tablist" aria-label="Categorías de obras">
+          <button class="tab-btn active" role="tab" aria-selected="true" data-tab="sanitaria">Albañilería Sanitaria y Electricidad</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="techos">Avances de Obra: Estructura y Techo</button>
+        </div>
+
+        <!-- Panel 1: Albañilería Sanitaria y Electricidad (Tema Azul Marino + Naranja de la lámina 3) -->
+        <div class="project-panel active" id="panel-sanitaria">
+          <div class="navy-banner reveal">
+            <div class="navy-banner-head">
+              <div>
+                <span class="hand-tag-white">Calidad que se ve, seguridad que dura</span>
+                <h3>ALBAÑILERÍA SANITARIA Y <span class="text-amber">ELECTRICIDAD</span></h3>
+                <p>Diseñamos, construimos y renovamos con precisión y compromiso.</p>
+              </div>
+              <button type="button" class="btn btn-outline-light btn-sm" data-lightbox="assets/img/reforma-flyer.jpg" data-caption="Lámina de obra: Albañilería Sanitaria y Electricidad">
+                Ver lámina original
+              </button>
+            </div>
+
+            <div class="timeline-3col">
+              <figure class="stage-card" data-lightbox="assets/img/reforma-antes.jpg" data-caption="Etapa 1: Antes — Preparación y demolición controlada">
+                <span class="stage-badge stage-badge--navy">ANTES</span>
+                <img src="assets/img/reforma-antes.jpg" alt="Estado inicial de obra antes de la reforma" loading="lazy" />
+                <figcaption>Evaluación estructural, picado y adecuación de instalaciones existentes.</figcaption>
+              </figure>
+
+              <figure class="stage-card" data-lightbox="assets/img/reforma-durante.jpg" data-caption="Etapa 2: Durante — Revestimientos, sanitaria y cableado">
+                <span class="stage-badge stage-badge--navy">DURANTE</span>
+                <img src="assets/img/reforma-durante.jpg" alt="Trabajos de revestimiento y terminación durante la obra" loading="lazy" />
+                <figcaption>Colocación de revestimientos, tendido eléctrico y pruebas hidráulicas.</figcaption>
+              </figure>
+
+              <figure class="stage-card" data-lightbox="assets/img/reforma-despues.jpg" data-caption="Etapa 3: Después — Acabado final e iluminación">
+                <span class="stage-badge stage-badge--gold">DESPUÉS</span>
+                <img src="assets/img/reforma-despues.jpg" alt="Resultado final terminado con luminaria moderna" loading="lazy" />
+                <figcaption>Acabados de calidad, luminarias instaladas y ambiente listo para disfrutar.</figcaption>
+              </figure>
+            </div>
+
+            <div class="extra-work-row">
+              <div class="extra-work-photos">
+                <figure class="mini-work" data-lightbox="assets/img/reforma-revestimiento.jpg" data-caption="Revestimiento de precisión e instalación eléctrica en proceso">
+                  <img src="assets/img/reforma-revestimiento.jpg" alt="Instalación de revestimientos y puntos eléctricos" loading="lazy" />
+                  <span>Revestimientos e instalación</span>
+                </figure>
+                <figure class="mini-work" data-lightbox="assets/img/reforma-iluminacion.jpg" data-caption="Montaje eléctrico e iluminación interior">
+                  <img src="assets/img/reforma-iluminacion.jpg" alt="Montaje de puntos de luz en techo" loading="lazy" />
+                  <span>Montaje de luminarias</span>
+                </figure>
+                <figure class="mini-work" data-lightbox="assets/img/reforma-ambiente.jpg" data-caption="Vista general del ambiente renovado">
+                  <img src="assets/img/reforma-ambiente.jpg" alt="Ambiente renovado con spots LED embutidos" loading="lazy" />
+                  <span>Resultado integrado</span>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Avances de Obra Estructural (Tema Oscuro + Naranja Construcción de la lámina 1) -->
+        <div class="project-panel" id="panel-techos" hidden>
+          <div class="construction-banner reveal">
+            <div class="navy-banner-head">
+              <div>
+                <span class="construction-kicker">¡SEGUIMOS CONSTRUYENDO CALIDAD!</span>
+                <h3>AVANCES <span class="text-orange">DE OBRA</span></h3>
+                <p>Ejecución prolija en albañilería estructural, herrería de techos y colocación de chapas.</p>
+              </div>
+              <button type="button" class="btn btn-outline-light btn-sm" data-lightbox="assets/img/obra-avances-flyer.jpg" data-caption="Avances de Obra — Construcción de pared, estructura y techo de chapas">
+                Ver lámina original
+              </button>
+            </div>
+
+            <div class="timeline-3col">
+              <figure class="stage-card" data-lightbox="assets/img/obra-pared.jpg" data-caption="Paso 1: Se levantó pared con revoque y viga de encadenado">
+                <span class="stage-badge stage-badge--orange">1. PARED LEVANTADA</span>
+                <img src="assets/img/obra-pared.jpg" alt="Pared levantada y revocada con andamio" loading="lazy" />
+                <figcaption>Levantamiento de muro, revoque grueso/fino y viga superior.</figcaption>
+              </figure>
+
+              <figure class="stage-card" data-lightbox="assets/img/obra-estructura.jpg" data-caption="Paso 2: Se armó estructura metálica para techo">
+                <span class="stage-badge stage-badge--orange">2. ESTRUCTURA PARA TECHO</span>
+                <img src="assets/img/obra-estructura.jpg" alt="Estructura metálica negra armada para sostener techo" loading="lazy" />
+                <figcaption>Armado y nivelación de perfilaría metálica con protección anticorrosiva.</figcaption>
+              </figure>
+
+              <figure class="stage-card" data-lightbox="assets/img/obra-chapas.jpg" data-caption="Paso 3: Se continuó con la instalación de chapas">
+                <span class="stage-badge stage-badge--orange">3. INSTALACIÓN DE CHAPAS</span>
+                <img src="assets/img/obra-chapas.jpg" alt="Instalación de chapas acanaladas sobre estructura metálica" loading="lazy" />
+                <figcaption>Fijación de chapas con pendiente calculada, zinguería y sellado estanco.</figcaption>
+              </figure>
+            </div>
+
+            <figure class="panorama-card" data-lightbox="assets/img/obra-techo-final.jpg" data-caption="Vista panorámica del techo de chapas finalizado">
+              <img src="assets/img/obra-techo-final.jpg" alt="Vista panorámica de cubierta de chapas terminada" loading="lazy" />
+              <figcaption>
+                <strong>Cubierta finalizada</strong> — Pendiente uniforme, fijaciones selladas y desagüe pluvial verificado.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECCIÓN IDENTIDAD / SELLO OFICIAL (FONDO MARFIL PIEDRA) ================= -->
+    <section class="section stone-identity-section" id="nosotros">
+      <div class="container identity-grid">
+        <div class="emblem-showcase reveal">
+          <button type="button" class="emblem-zoom-card" data-lightbox="assets/img/emblema-original.jpg" data-caption="Emblema Institucional — DG y SP Servicios">
+            <img src="assets/img/emblema-circular.png" alt="Sello oficial circular DG y SP Servicios" />
+            <span class="zoom-hint">Clic para ampliar sello oficial</span>
+          </button>
+        </div>
+
+        <div class="identity-content reveal">
+          <span class="section-kicker-dark">IDENTIDAD Y RESPALDO</span>
+          <h2 class="section-title-dark">Confianza • Calidad • Compromiso</h2>
+          <p class="identity-lead">
+            Detrás de <strong>DG y SP Servicios</strong> hay un equipo técnico presente en cada obra. Desde la planificación en oficina con planos y materiales certificados hasta la entrega final impecable.
+          </p>
+
+          <div class="identity-values-grid">
+            <div class="id-val-box">
+              <strong>Ideas y Planificación</strong>
+              <p>Asesoramos sobre materiales y soluciones constructivas que maximizan la vida útil de tu propiedad.</p>
+            </div>
+            <div class="id-val-box">
+              <strong>Obras y Resultados</strong>
+              <p>Cumplimos los plazos pactados con limpieza, seguridad en obra y comunicación permanente.</p>
+            </div>
+          </div>
+
+          <div class="identity-team-thumb" data-lightbox="assets/img/equipo-completo.jpg" data-caption="Equipo Directivo — DG y SP Servicios">
+            <img src="assets/img/equipo-completo.jpg" alt="Equipo DG y SP Servicios con todos sus rubros y contactos" loading="lazy" />
+            <div>
+              <strong>Ver presentación institucional completa</strong>
+              <span>Montevideo, Uruguay • Atención directa de sus titulares</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECCIÓN COTIZADOR Y CONTACTO ================= -->
+    <section class="section contact-section" id="contacto">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <span class="section-kicker">ESTAMOS EN MONTEVIDEO, URUGUAY</span>
+          <h2 class="section-title">Solicitá tu <span class="text-gold">Presupuesto Sin Cargo</span></h2>
+          <p class="contact-subtitle">
+            Contanos qué proyecto tenés en mente. Respondemos directamente por WhatsApp o teléfono para coordinar una visita técnica.
+          </p>
+
+          <div class="contact-cards-stack">
+            <a href="https://wa.me/59895006915?text=Hola%20DG%20y%20SP%20Servicios%2C%20quiero%20solicitar%20un%20presupuesto." target="_blank" rel="noopener" class="direct-contact-card">
+              <div class="dc-icon dc-icon--wa">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12.03 2a9.97 9.97 0 0 0-8.5 15.2L2 22l4.94-1.48A9.97 9.97 0 1 0 12.03 2Zm5.82 14.11c-.25.7-1.42 1.34-1.97 1.41-.51.07-1.15.1-1.85-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07 0-1.46.77-2.18 1.04-2.48.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.07.92 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.45.52-.15.15-.3.31-.13.61.18.3.78 1.28 1.67 2.08 1.15 1.03 2.12 1.35 2.42 1.5.3.15.47.13.65-.07.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.35.07.13.07.73-.18 1.43Z"/></svg>
+              </div>
+              <div>
+                <small>WhatsApp / Celular Principal</small>
+                <strong>095 006 915</strong>
+              </div>
+              <span class="dc-arrow">Escribir →</span>
+            </a>
+
+            <a href="https://wa.me/59899363389?text=Hola%20DG%20y%20SP%20Servicios%2C%20quiero%20consultar%20por%20un%20trabajo." target="_blank" rel="noopener" class="direct-contact-card">
+              <div class="dc-icon dc-icon--phone">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <small>Teléfono / WhatsApp Secundario</small>
+                <strong>099 363 389</strong>
+              </div>
+              <span class="dc-arrow">Contactar →</span>
+            </a>
+
+            <a href="https://instagram.com/dg_electricidadyredes" target="_blank" rel="noopener" class="direct-contact-card">
+              <div class="dc-icon dc-icon--ig">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </div>
+              <div>
+                <small>Seguinos y conocé más de nuestros trabajos</small>
+                <strong>@dg_electricidadyredes</strong>
+              </div>
+              <span class="dc-arrow">Ver perfil →</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Formulario Cotizador a WhatsApp -->
+        <div class="quote-form-card reveal">
+          <h3>Cotizador Rápido por WhatsApp</h3>
+          <p class="form-hint">Completá los datos y se abrirá tu consulta armada lista para enviar.</p>
+
+          <form id="quoteForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="clientName">Tu Nombre</label>
+                <input type="text" id="clientName" name="clientName" placeholder="Ej: Martín Rodríguez" required />
+              </div>
+              <div class="form-group">
+                <label for="clientZone">Barrio / Zona (Montevideo)</label>
+                <input type="text" id="clientZone" name="clientZone" placeholder="Ej: Pocitos, Centro, Carrasco..." required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="serviceSelect">Rubro / Servicio</label>
+                <select id="serviceSelect" name="serviceSelect" required>
+                  <option value="Remodelaciones y Acabados">Remodelaciones y Acabados (Cocinas/Baños)</option>
+                  <option value="Instalaciones Eléctricas">Instalaciones Eléctricas y Redes</option>
+                  <option value="Plomería y Sanitaria">Plomería y Albañilería Sanitaria</option>
+                  <option value="Albañilería">Albañilería y Techos de Chapa</option>
+                  <option value="Pintura Interior y Exterior">Pintura Interior y Exterior</option>
+                  <option value="Mantenimiento General">Mantenimiento General</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="urgencySelect">Plazo estimado</label>
+                <select id="urgencySelect" name="urgencySelect">
+                  <option value="Lo antes posible">Lo antes posible</option>
+                  <option value="Esta semana">Esta semana</option>
+                  <option value="Este mes">Este mes / Planificando</option>
+                  <option value="Presupuesto de obra">Solo cotización comparativa</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="targetLine">Enviar consulta al número</label>
+              <select id="targetLine" name="targetLine">
+                <option value="59895006915">095 006 915 (WhatsApp Principal)</option>
+                <option value="59899363389">099 363 389 (WhatsApp Alternativo)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="projectDetails">Descripción breve del trabajo</label>
+              <textarea id="projectDetails" name="projectDetails" rows="3" placeholder="Contanos qué necesitás reformar, reparar o instalar..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold btn-full btn-lg">
+              Enviar Consulta por WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-text">
+          <strong>DG y SP <span>SERVICIOS</span></strong>
+          <small>REFORMAS EN GRAL. Y MANTENIMIENTOS</small>
+        </div>
+        <p>Soluciones con distinción, resultados que hablan. Detalles que transforman, calidad que perdura.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Servicios</h4>
+        <a href="#servicios">Mantenimiento General</a>
+        <a href="#servicios">Instalaciones Eléctricas</a>
+        <a href="#servicios">Pintura Interior y Exterior</a>
+        <a href="#servicios">Plomería y Sanitaria</a>
+        <a href="#servicios">Albañilería y Techos</a>
+        <a href="#inversion">Remodelaciones de Cocinas y Baños</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contacto Directo</h4>
+        <p>📍 Montevideo, Uruguay</p>
+        <p>📱 <a href="tel:+59895006915">095 006 915</a></p>
+        <p>📞 <a href="tel:+59899363389">099 363 389</a></p>
+        <p>📷 <a href="https://instagram.com/dg_electricidadyredes" target="_blank" rel="noopener">@dg_electricidadyredes</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© <span id="currentYear">2026</span> DG y SP Servicios. Todos los derechos reservados.</span>
+        <span>Confianza • Calidad • Compromiso</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/59895006915?text=Hola%20DG%20y%20SP%20Servicios%2C%20quisiera%20solicitar%20asesoramiento." target="_blank" rel="noopener" class="wa-float" aria-label="Chatear por WhatsApp con DG y SP Servicios">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M12.03 2a9.97 9.97 0 0 0-8.5 15.2L2 22l4.94-1.48A9.97 9.97 0 1 0 12.03 2Zm5.82 14.11c-.25.7-1.42 1.34-1.97 1.41-.51.07-1.15.1-1.85-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07 0-1.46.77-2.18 1.04-2.48.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.07.92 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.45.52-.15.15-.3.31-.13.61.18.3.78 1.28 1.67 2.08 1.15 1.03 2.12 1.35 2.42 1.5.3.15.47.13.65-.07.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.35.07.13.07.73-.18 1.43Z"/></svg>
+    <span class="wa-tooltip">Presupuesto por WhatsApp</span>
+  </a>
+
+  <!-- Lightbox Modal para fotos y láminas -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada" hidden>
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Cerrar vista ampliada">&times;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="" />
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
