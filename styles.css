@@ -1585,6 +1585,61 @@ textarea::placeholder {
   box-shadow: 0 0 0 1px rgba(var(--gold-rgb), 0.45), 0 20px 44px rgba(0, 0, 0, 0.45);
 }
 
+/* ================= NOSOTROS: FLOTA ================= */
+.fleet-section {
+  background: var(--bg-charcoal);
+}
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.fleet-copy .section-subtitle {
+  margin-bottom: 1.5rem;
+}
+
+.fleet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.fleet-list li::before {
+  content: "◆ ";
+  color: var(--gold);
+  font-size: 0.62rem;
+}
+
+.fleet-figure {
+  margin: 0;
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #0E1013;
+  box-shadow: var(--shadow-lg);
+}
+
+.fleet-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fleet-figure figcaption {
+  padding: 0.8rem 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-subtle);
+}
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
   .main-nav {
@@ -1595,7 +1650,8 @@ textarea::placeholder {
   }
   .hero-grid,
   .identity-grid,
-  .contact-grid {
+  .contact-grid,
+  .fleet-grid {
     grid-template-columns: 1fr;
   }
   .services-grid {
